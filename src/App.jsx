@@ -1,10 +1,12 @@
 import './App.css'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import SearchField from './components/SearchField';
 
 function App() {
 
   const [countries, setCountries] = useState([]);
+  const [searchField, setSearchField] = useState('')
 
   useEffect(() => {
     axios
@@ -17,6 +19,7 @@ function App() {
   return (
     <div>
       <p>Hello</p>
+      <SearchField searchField={searchField} setSearchField={setSearchField} />
       {countries.map(country => <p>{country.name.common}</p>
       )}
     </div>
