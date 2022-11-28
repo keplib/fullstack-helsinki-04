@@ -2,6 +2,7 @@ import './App.css'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import SearchField from './components/SearchField';
+import CountryList from './components/CountryList';
 
 function App() {
 
@@ -18,10 +19,8 @@ function App() {
 
   return (
     <div>
-      <p>Hello</p>
       <SearchField searchField={searchField} setSearchField={setSearchField} />
-      {countries.map(country => <p>{country.name.common}</p>
-      )}
+      <CountryList countries={countries} searchField={searchField} />
     </div>
   )
 }
