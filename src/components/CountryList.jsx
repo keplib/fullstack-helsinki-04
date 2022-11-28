@@ -1,4 +1,5 @@
 import CountryDetailPage from "./CountryDetailPage";
+import CountryListRow from "./CountryListRow";
 
 const CountryList = ({ countries, searchField }) => {
 
@@ -18,8 +19,7 @@ const CountryList = ({ countries, searchField }) => {
 
     return (
         <div>
-            <p>{searchField}</p>
-            {countriesToShow.map(country => <p>{country.name.common}</p>
+            {countriesToShow.map(country => <CountryListRow country={country} />
             )}
         </div>
     )
