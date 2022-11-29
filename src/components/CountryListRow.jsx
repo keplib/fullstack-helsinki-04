@@ -1,7 +1,6 @@
 const CountryListRow = ({ country, setSelectedCountry, setIsSelected }) => {
 
     const showButton = () => {
-        console.log(country.name.common)
         setIsSelected(true);
         setSelectedCountry(country);
     }
