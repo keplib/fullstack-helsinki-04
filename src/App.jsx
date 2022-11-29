@@ -9,8 +9,6 @@ function App() {
   const [countries, setCountries] = useState([]);
   const [searchField, setSearchField] = useState('')
 
-  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
-
   useEffect(() => {
     axios
       .get('https://restcountries.com/v3.1/all').then(response => {
@@ -21,7 +19,6 @@ function App() {
 
   return (
     <div>
-      <p>{API_KEY}</p>
       <SearchField searchField={searchField} setSearchField={setSearchField} />
       <CountryList countries={countries} searchField={searchField} />
     </div>

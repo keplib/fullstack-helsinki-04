@@ -1,3 +1,5 @@
+import WeatherSection from "./WeatherSection";
+
 const CountryDetailPage = ({ country }) => {
     return (
         <div>
@@ -13,6 +15,7 @@ const CountryDetailPage = ({ country }) => {
                 })}
             </ul>
             <img src={country.flags.png} />
+            <WeatherSection country={country} />
         </div>
     )
 }
